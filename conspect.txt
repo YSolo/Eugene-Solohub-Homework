@@ -20,8 +20,26 @@ Use Git:
 	git init
 	git status
 	git add <file name>
-* one can use 'git add .' or 'git add -A' to commit all the files in the folder
+* one can use 'git add .' or 'git add -A' to commit all the files in the folder; -a for already posted files
+
 	git reset <name>
 	git checkout 
-	git commit -m <text>
+	git commit -m <text>  // m stands for 'message' to indicate a purpose of the commit 
+* try to write commit message in imperative present tense
+
+	git log // see log of commits
+
+	git diff //see the difference in unstaged and last commit
+	git diff --staged // see the diff between staged and previous verion
 	
+Get help
+
+	git help
+	git help push
+	
+
+Clone project
+
+	git clone git@github.com:UserName/RepoName.git
+	git push origin master
+
