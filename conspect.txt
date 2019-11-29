@@ -1,0 +1,27 @@
+Lesson-01
+=========
+
+Git and GitHub
+--------------
+
+Set up your environment:
+
+	git config --global user.name <NAME>
+	git config --global user.email <EMAIL>
+	
+	git config --global core.quotepath off
+	git config --global core.atocrlf true
+	git config --global safecrlf true
+
+	git config --list  // check what the values currently are
+
+Use Git:
+
+	git init
+	git status
+	git add <file name>
+* one can use 'git add .' or 'git add -A' to commit all the files in the folder
+	git reset <name>
+	git checkout 
+	git commit -m <text>
+	
