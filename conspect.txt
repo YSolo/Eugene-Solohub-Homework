@@ -9,8 +9,13 @@ Set up your environment:
 	git config --global user.name <NAME>
 	git config --global user.email <EMAIL>
 	
+	# Display UTF-8 characters in filenames, if you're having problems seeing them
 	git config --global core.quotepath off
-	git config --global core.atocrlf true
+
+	# auto-converting CRLF line endings into LF when you add a file to the index for Windows users
+	git config --global core.autocrlf true 
+
+	# or "true", git rejects irreversible conversions
 	git config --global safecrlf true
 
 	git config --list  // check what the values currently are
