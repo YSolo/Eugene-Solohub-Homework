@@ -1,0 +1,9 @@
+Task-01
+
+- Create a folder
+- Make local repository
+- Create index.html file
+- Write smth in it (ex. 'Hello Lesson #1')
+- Commit it
+- Share link to this repository to LMS
+- Get your grade
