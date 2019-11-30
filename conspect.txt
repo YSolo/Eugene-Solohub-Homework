@@ -34,6 +34,29 @@ Use Git:
 
 	git log // see log of commits
 
+	git log --pretty=oneline
+	git log --pretty=oneline --max-count=2
+	git log --pretty=oneline --since='5 minutes ago'
+	git log --pretty=oneline --until='5 minutes ago'
+	git log --pretty=oneline --author=<your name>
+	git log --pretty=oneline --all
+
+	git log --all --pretty=format:"%h %cd %s (%an)" --since='7 days ago'
+	
+	git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+	Where:
+		--pretty="..." defines the output format.
+		%h is the abbreviated hash of the commit
+		%d commit decorations (e.g. branch heads or tags)
+		%ad is the commit date
+		%s is the comment
+		%an is the name of the author
+		--graph tells git to display the commit tree in the form of an ASCII graph layout
+		--date=short keeps the date format short and nice
+
+	gitk // cool command to track the changes visualy.
+
+
 	git diff //see the difference in unstaged and last commit
 	git diff --staged // see the diff between staged and previous verion
 	
@@ -47,4 +70,3 @@ Clone project
 
 	git clone git@github.com:UserName/RepoName.git
 	git push origin master
-
