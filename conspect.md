@@ -38,7 +38,8 @@ No worries if you realized that something is forgotten:\
 `git branch` - see what branches are available\
 `git checkout <branch>` - switch to a branch\
 `git chechout -b <new_branch>` - create new branch based on current HEAD and switch to it\
-`git checkout -b <new-branch> <existing-branch>` - same, but use existing branch instead of HEAD
+`git checkout -b <new-branch> <existing-branch>` - same, but use existing branch instead of HEAD\
+`git branch -d <existing-branch>` - delete existing branch
 
 ## Logging changes
 `git log` - see log of commits\
