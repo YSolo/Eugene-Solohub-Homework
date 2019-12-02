@@ -83,3 +83,9 @@ git help push
 	git clone git@github.com:UserName/RepoName.git
 	git push origin master
 ```
+
+## Useful links
+[Learn enough Git to be dangerous](https://www.learnenough.com/git-tutorial/getting_started)
+[The Odin Project: GIT basics](https://www.theodinproject.com/courses/web-development-101/lessons/git-basics)
+[The Odin Project: Practicing GIT basics](https://www.theodinproject.com/courses/web-development-101/lessons/practicing-git-basics)
+[Git How To](https://githowto.com/)
