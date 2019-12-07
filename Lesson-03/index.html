@@ -27,33 +27,18 @@
 
         var message = 'Круто, значит тебе ' + userAge;
         var lastCharacter = userAge[userAge.length - 1]
-        var lastTwoCharacters = userAge[userAge.length - 2] + lastCharacter
+        var secondLastCharacter = userAge[userAge.length - 2]
 
-        switch (lastTwoCharacters) {
-          case '11':
-          case '12':
-          case '13':
-          case '14':
-            alert (message + ' лет');
-            break;
-
-          default:
-            switch (lastCharacter) {
-              case '2':
-              case '3':
-              case '4':
-                alert (message + ' года');
-                break;
-
-              case '1':
-                alert (message + ' год');
-                break;
-
-              default:
-                alert (message + ' лет');
-              }
-            }
+        if (!'1234'.includes(lastCharacter) || secondLastCharacter === '1') {
+          message += ' лет';
+        } else if (lastCharacter === '1') {
+          message += ' год';
+        } else {
+          message += ' года';
         }
+
+        alert(message);
+      }
 
     </script>
 
