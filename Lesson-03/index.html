@@ -21,31 +21,38 @@
       //check if input is not a numeric value
       } else if (isNaN(+userAge)) {
 
-        alert("Попробуй ввести число в следующий раз");
+        alert("Попробуй ввести ЧИСЛО в следующий раз. Например: 1, 15 или 29");
 
       } else {
 
-        var message = 'Круто, значит тебе ';
+        var message = 'Круто, значит тебе ' + userAge;
         var lastCharacter = userAge[userAge.length - 1]
+        var lastTwoCharacters = userAge[userAge.length - 2] + lastCharacter
 
-        switch (lastCharacter) {
-          case '2':
-          case '3':
-          case '4':
-            alert (message + `${userAge} года`);
+        switch (lastTwoCharacters) {
+          case '11':
+          case '12':
+          case '13':
+          case '14':
+            alert (message + ' лет');
             break;
-          case '1':
-            // Make sure it's not '11' at the end
-            if (!(userAge[userAge.length - 2] + lastCharacter === '11')) {
-              alert (message + `${userAge} год`);
-              break;
-            } else {
-              // moving on
-            }
+
           default:
-            alert (message + `${userAge} лет`);
-            break;
-          }
+            switch (lastCharacter) {
+              case '2':
+              case '3':
+              case '4':
+                alert (message + ' года');
+                break;
+
+              case '1':
+                alert (message + ' год');
+                break;
+
+              default:
+                alert (message + ' лет');
+              }
+            }
         }
 
     </script>
