@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Твой возраст</title>
+  </head>
+
+  <body>
+    <h1>ТВОЙ ВОЗРАСТ</h1>
+    <p>Ответь на один вопрос и мы скажем, сколько тебе лет!</p>
+    <p>Обнови страницу, чтобы попрововать еще раз.</p>
+
+    <script>
+      var userAge = prompt("Привет, сколько тебе лет?", '');
+
+      // check if no input is given
+      if (!userAge && userAge !== '0') {
+
+        alert("Не хотите говорить - не надо");
+
+      //check if input is not a numeric value
+      } else if (isNaN(+userAge)) {
+
+        alert("Попробуй ввести число в следующий раз");
+
+      } else {
+
+        var message = 'Круто, значит тебе ';
+        var lastCharacter = userAge[userAge.length - 1]
+
+        switch (lastCharacter) {
+          case '2':
+          case '3':
+          case '4':
+            alert (message + `${userAge} года`);
+            break;
+          case '1':
+            // Make sure it's not '11' at the end
+            if (!(userAge[userAge.length - 2] + lastCharacter === '11')) {
+              alert (message + `${userAge} год`);
+              break;
+            } else {
+              // moving on
+            }
+          default:
+            alert (message + `${userAge} лет`);
+            break;
+          }
+        }
+
+    </script>
+
+
+  </body>
+</html>
