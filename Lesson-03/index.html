@@ -8,7 +8,7 @@
   <body>
     <h1>ТВОЙ ВОЗРАСТ</h1>
     <p>Ответь на один вопрос и мы скажем, сколько тебе лет!</p>
-    <p>Обнови страницу, чтобы попрововать еще раз.</p>
+    <p>Обнови страницу, чтобы попробовать еще раз.</p>
 
     <script>
       var userAge = prompt("Привет, сколько тебе лет?", '');
@@ -29,7 +29,8 @@
         var lastCharacter = userAge[userAge.length - 1]
         var secondLastCharacter = userAge[userAge.length - 2]
 
-        if (!'1234'.includes(lastCharacter) || secondLastCharacter === '1') {
+        // 'indexOf' below is used instead of 'includes' for IE support
+        if ('1234'.indexOf(lastCharacter) < 0 || secondLastCharacter === '1') {
           message += ' лет';
         } else if (lastCharacter === '1') {
           message += ' год';
