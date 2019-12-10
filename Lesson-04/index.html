@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Triangle</title>
+  </head>
+  <body>
+
+
+    <script>
+
+      do {
+
+        var triangleHeight = +prompt('Введите высоту треугольника', '');
+        var triangle = '';
+
+        if (isNaN(triangleHeight)) {
+          alert('Обновите страницу и введите числовое значение высоты треугольника');
+
+        } else if (triangleHeight) {
+          for (var i = 1; i <= triangleHeight; i++) {
+
+            for (var j = 1; j <= i; j++) {
+              triangle += '*';
+            }
+            // Добавить новую строку в каждой итерации кроме последней
+            triangleHeight === i || (triangle += '\n');
+          }
+
+          alert (triangle);
+        }
+      } while (triangleHeight);
+
+    </script>
+  </body>
+</html>
