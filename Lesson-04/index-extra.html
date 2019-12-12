@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fair Tree</title>
+  </head>
+  <body>
+
+    <script>
+
+    //__*        2 spaces (s); 1 star  ; 3 symbols (i)
+    //_***       1 spaces (s); 3 stars ; 4 symbols (i)
+    //*****      0 spaces (s); 5 stars ; 5 symbols (i)
+
+    do {
+
+      var triangleHeight = +prompt("Give me the number",'');
+      var message = isNaN(triangleHeight) ? 'This is not a number' : '';
+
+      for (var i = triangleHeight, s = i - 1;
+        s >= 0 ;
+        i ++, s--) {
+
+        for (var j = 1; j <= i; j++) {
+          message += (j <= s) ? " " : "*";
+        }
+
+        message += '\n';
+      }
+
+      alert(message);
+
+    } while (triangleHeight)
+
+    </script>
+
+  </body>
+</html>
