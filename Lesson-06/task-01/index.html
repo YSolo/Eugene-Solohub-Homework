@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+      //Проверка
+      alert("getResult(5,6,'+') returns: " + getResult(5,6,'+') + '\n' +
+            "getResult(5,6,'*') returns: " + getResult(5,6,'*') + '\n' +
+            "getResult(5,6,'/') returns: " + getResult(5,6,'/') + '\n' +
+            "getResult(5,6'**') returns: " + getResult(5,6,'**'));
+
+
+      function getResult(num1, num2, operator) {
+        switch (operator) {
+          case '+':
+            return (num1 + num2);
+          case '-':
+            return (num1 - num2);
+          case '*':
+            return (num1 * num2);
+          case '/':
+            return (num1 / num2);
+          case '%':
+            return (num1 % num2);
+          case '**':
+            return (num1 ** num2);
+          default:
+            return null;
+        }
+      }
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+      // Проверка
+      alert("trimmString('hello', ['o']) вернет: " +
+            trimmString('hello', ['o']));
+
+      alert("trimmString('Hello World', ['o','r','d']) вернет: " +
+            trimmString('Hello World', ['o','r','d']));
+
+      alert("trimmString('Синхрофазатрон', ['ф','а','з']) вернет: " +
+            trimmString('Синхрофазатрон', ['ф','а','з']));
+
+      // берет строку и массив символов и возвращает строку
+      // без символов в массиве
+      function trimmString(string, except) {
+        trimmedString = '';
+        for (var i = 0; i < string.length; i++) {
+          if (!inArray(string[i], except)) {
+            trimmedString += string[i];
+          }
+        }
+        return trimmedString;
+      }
+
+      // Проверяет наличие символа в массиве
+      function inArray(character, array) {
+
+        for (var i = 0; i < array.length; i++) {
+          if (character === array[i]) {
+            return true;
+          }
+        }
+
+        return false;
+      }
+    </script>
+  </body>
+</html>
