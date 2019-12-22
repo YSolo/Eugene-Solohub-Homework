@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lesson-07</title>
+  </head>
+  <body>
+
+    <script>
+
+      // Проверка:
+      // callback функция для проверки
+      function myCallback(element, id, array) {
+        console.log(`element "${element}" at [${id}] in array ${array}`);
+      }
+
+      // Массив для проверки
+      var array1 = [1, 2, 'three'];
+
+      // Результат проверки
+      console.log ('Ниже результат моей функции:');
+      forEach(array1, myCallback);
+
+      console.log('\n');
+      console.log('А тут - результат метода .forEach:');
+      array1.forEach(myCallback);
+
+
+      // Мой собственный .forEach в виде функции
+      function forEach(array, callback) {
+        if (Array.isArray(array) &&
+          typeof callback === 'function') {
+
+          for (var i = 0; i < array.length; i++) {
+            callback(array[i], i, array);
+          }
+        } else {
+          throw new TypeError('Wrong input');
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
