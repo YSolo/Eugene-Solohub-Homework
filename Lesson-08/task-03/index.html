@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lesson-08 task-03</title>
+  </head>
+  <body>
+
+    <script>
+
+      alert('Проверка задания 3 - Полиндром \n' +
+      '\n' +
+      'Строка "506" возвращает --> ' + isPalindrome("506") + '\n' +
+      'Строка "505" возвращает --> ' + isPalindrome("505") + '\n' +
+      'Число 506 возвращает --> ' + isPalindrome(506) + '\n' +
+      'Число 505 возвращает --> ' + isPalindrome(505) + '\n' +
+      '\n' +
+      'Жми ОК и попробуй сам.')
+
+      let userInput;
+
+      // Динамическая проверка
+      while(true) {
+        userInput = prompt("Введи число: ", 0);
+
+        if (!userInput ||
+          !isFinite(+userInput) ||
+          userInput === '') {
+            break;
+        }
+
+        alert(isPalindrome(userInput));
+      }
+
+      // Функция описанная в задании
+      function isPalindrome(number) {
+        return String(number).split('').reverse().join('') === String(number);
+      }
+
+    </script>
+  </body>
+</html>

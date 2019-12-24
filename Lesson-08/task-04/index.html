@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lesson-08 task-04</title>
+  </head>
+  <body>
+    <script>
+      // Проверка:
+      let controlArray = [[1,2,3],101,[[4,5,6],7,[8,9]]]
+
+      alert('Контрольный массив: [[1,2,3],101,[[4,5,6],7,[8,9]]] \n' +
+        'вызов функции flat(controlArray) возвращает --> ' + flat(controlArray))
+
+      // Функция без использования метода .flat
+      function flat(nestedArray) {
+        return String(nestedArray).split(',');
+      }
+
+      // Функция с использованием метода .flat, но это слишком просто
+      function flat2(array) {
+        array.flat(Infinity);
+      }
+
+
+
+    </script>
+
+  </body>
+</html>

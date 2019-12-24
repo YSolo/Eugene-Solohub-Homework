@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lesson-08 task-01-02</title>
+  </head>
+  <body>
+
+    <script>
+
+      // Проверка заданий 1 и 2:
+      controlArray = [1,3,4,5,"5",34,51,null,NaN,18,'обезьянка'];
+      alert('Проверка заданий 1 и 2: \n' +
+        '\n' +
+        'Контрольный массив: ' + controlArray + '\n' +
+        'odd(controlArray) --> ' + odd(controlArray) + '\n' +
+        'even(controlArray) --> ' + even(controlArray));
+
+      // Вспомогательная функция - проверяет валидность числа
+      function isValidNumber(number) {
+        if (isFinite(number) &&
+          number !== '' &&
+          number !== null) {
+            return true;
+        }
+      }
+
+      // Задание 1
+      function isOdd(number) {
+        if (isValidNumber(number)) {
+          return (+number % 2)
+        }
+      }
+
+      function odd(numbers) {
+        return numbers.filter(isOdd);
+      }
+
+      // Задание 2
+      function isEven(number) {
+        if (isValidNumber(number)) {
+          return !(+number % 2)
+        }
+      }
+
+      function even(numbers) {
+        return numbers.filter(isEven);
+      }
+
+
+
+
+    </script>
+  </body>
+</html>
