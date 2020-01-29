@@ -14,15 +14,8 @@
 
       // Функция без использования метода .flat
       function flat(nestedArray) {
-        return String(nestedArray).split(',');
+        return String(nestedArray).split(',').map(Number);
       }
-
-      // Функция с использованием метода .flat, но это слишком просто
-      function flat2(array) {
-        array.flat(Infinity);
-      }
-
-
 
     </script>
 
