@@ -1,0 +1,118 @@
+h3, h4, p {
+  margin: 0 0 5px;
+}
+
+footer h3 {
+  text-decoration: underline;
+}
+
+input {
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  margin-bottom: 5px;
+}
+
+input.task_title_name {
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+.page {
+  font-family: 'Roboto', monospace;
+  font-size: 20px;
+  margin: 0;
+}
+
+.header {
+  margin: 0;
+  max-width: 900px;
+}
+
+.header_title {
+  font-weight: 800;
+  margin: 0;
+}
+
+.header_title_description {
+  color: darkgrey;
+}
+
+.page__header {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page__content {
+  padding: 20px;
+  max-width: 900px;
+}
+
+.button {
+  padding: 10px;
+  font-family: 'Roboto', monospace;
+  font-size: 20px;
+  background-color: transparent;
+  border: 2px solid darkgrey;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: darkgrey;
+  color: white;
+}
+
+.button:active {
+  background-color: grey;
+}
+
+.task {
+  margin: 10px 0 30px 0;
+}
+
+.task_button {
+  padding: 4px;
+  margin: 0 10px;
+  border: 0;
+  border-bottom: 1px solid darkgrey;
+  border-right: 1px solid darkgrey;
+}
+
+.task-buttons {
+  float: right;
+  display: flex;
+}
+
+.task_title {
+  border-bottom: 1px solid darkgrey;
+  margin-bottom: 15px;
+}
+
+.task_title_name {
+  display: inline-block;
+  width: auto;
+}
+
+.done {
+  color: silver;
+}
+
+.footer {
+  padding: 20px;
+  margin: 0;
+  background-color: grey;
+  color: white;
+}
+
+.time {
+  color: lightgrey;
+  padding-top: 5px;
+  padding-right: 5px;
+}
